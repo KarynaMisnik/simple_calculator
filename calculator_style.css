@@ -1,0 +1,124 @@
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+}
+:root {
+--gradient: linear-gradient(90deg, #ecf0f1, #bdc3c7, #95a5a6, #7f8c8d, #71879a, #b1c5d4, #709fdc);
+
+/* font-size */
+--fs-h1: 2rem;
+--fs-placeholder: 1.25rem;
+--fs-answer: 2rem;
+
+/* font-weight */
+--fw-bold: 700;
+
+/* font-family*/
+--ff-google: 'Orbitron', sans-serif;
+
+/* color buttons and input text */
+--clr-btn-white: #FFFFFF;
+--clr-btn-purple: rgb(109, 140, 212); 
+}
+
+body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+min-height: 100vh;
+line-height: 1.6;
+background-image: var(--gradient);
+background-size: 400%;
+animation: bg-animation 25s infinite;
+}
+
+/* background gradient animation */
+@keyframes bg-animation {
+0% {background-position: left}
+
+50% {background-position: right}
+
+100% {background-position: left}
+}
+
+/* Typography */
+
+h1{
+font-size: var(--fs-h1);
+text-align: center;
+font-family: var(--ff-google);
+}
+
+h2{
+text-align: center;
+font-family: var(--ff-google);
+}
+
+#num1,
+#num2,
+#input_dis,
+#input_time,
+#input_distance,
+#input_speed,
+#input_time_distance,
+#input_speed_distance{
+font-size: var(--fs-placeholder);
+}
+
+.answer{
+font-size: var(--fs-answer);
+font-weight: var(--fw-bold);
+font-family: var(--ff-google);
+}
+/* Typography  End*/
+
+.calculator-calculator__simple{
+text-align: center;
+}
+
+.btn__add,
+.btn__substract,
+.btn__multiply,
+.btn__divide,
+.btn__modulo,
+#input{
+border-radius: 15%;
+border: none;
+font-size: 2em;
+font-weight: 700;
+font-family: var(--ff-google);
+color: var(--clr-btn-purple);
+margin-right: .7rem;
+margin-left: .5rem;
+background: var(--clr-btn-white);
+}
+
+.btn__add,
+.btn__substract,
+.btn__multiply,
+.btn__divide,
+.btn__modulo{
+width: 3rem;
+height: 3rem;
+}
+
+.send-form {
+width: 3rem;
+height: 3.5rem;
+margin-top: 10px;
+}
+
+.btn__add:hover,
+.btn__substract:hover,
+.btn__multiply:hover,
+.btn__divide:hover,
+.btn__modulo:hover,
+#input:hover{
+background: var(--clr-btn-purple);
+color: var(--clr-btn-white);
+}
+
+
